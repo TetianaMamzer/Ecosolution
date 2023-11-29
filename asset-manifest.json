@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Ecosolution/static/css/main.a80fbb4d.css",
+    "main.js": "/Ecosolution/static/js/main.d00dad9b.js",
+    "static/media/desktop.png": "/Ecosolution/static/media/desktop.762a1926813167dfb983.png",
+    "static/media/tablet.png": "/Ecosolution/static/media/tablet.a0dad29fb79b3bcefcfb.png",
+    "static/media/beautiful3.png": "/Ecosolution/static/media/beautiful3.508310ef098a18003b2b.png",
+    "static/media/beautiful5.png": "/Ecosolution/static/media/beautiful5.2007ee58698a3272e4e2.png",
+    "static/media/des2.png": "/Ecosolution/static/media/des2.c972965c14de6caee6e5.png",
+    "static/media/des1.png": "/Ecosolution/static/media/des1.c67bf10fb0b37aec4b2f.png",
+    "static/media/beautiful4.png": "/Ecosolution/static/media/beautiful4.6a98bee7f03c14419266.png",
+    "static/media/beautiful2.png": "/Ecosolution/static/media/beautiful2.e33d5045d57895e3fae8.png",
+    "static/media/mob.png": "/Ecosolution/static/media/mob.82188a65894393fb43c5.png",
+    "static/media/build1.png": "/Ecosolution/static/media/build1.495425bcc40ab7b9ecae.png",
+    "static/media/build2.png": "/Ecosolution/static/media/build2.b9e07be8b9abef76724b.png",
+    "static/media/beautiful1.png": "/Ecosolution/static/media/beautiful1.c92d5bf7f89e4f28d235.png",
+    "static/media/icon3.svg": "/Ecosolution/static/media/icon3.5ae3f7a90d99901de3f1f61186c47d06.svg",
+    "static/media/icon2.svg": "/Ecosolution/static/media/icon2.c1a28e55a836f989d4539a1237f4548f.svg",
+    "static/media/icon4.svg": "/Ecosolution/static/media/icon4.a47cd925ea90fbd5c8aa084cf8d0a3cf.svg",
+    "static/media/icon1.svg": "/Ecosolution/static/media/icon1.357259e8f8e426e99e7473e21b94bf64.svg",
+    "index.html": "/Ecosolution/index.html",
+    "static/media/arrow-left.svg": "/Ecosolution/static/media/arrow-left.c1bfacdfa8bdd9dea44291714b4b0814.svg",
+    "static/media/arrow-right.svg": "/Ecosolution/static/media/arrow-right.26bcab7a081e6a7663171586fd150e56.svg",
+    "static/media/menu.svg": "/Ecosolution/static/media/menu.75166dfdfb0dd5585a26094e1dd4c359.svg",
+    "main.a80fbb4d.css.map": "/Ecosolution/static/css/main.a80fbb4d.css.map",
+    "main.d00dad9b.js.map": "/Ecosolution/static/js/main.d00dad9b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a80fbb4d.css",
+    "static/js/main.d00dad9b.js"
+  ]
+}
