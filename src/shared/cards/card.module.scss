@@ -1,0 +1,136 @@
+.card {
+  background-color: #eaedf1;
+  min-width: 100%;
+  height: 100%;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+
+    @media (min-width: 768px) {
+      margin-right: 24px;
+    }
+
+    @media (min-width: 1280px) {
+      margin-right: 48px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 345px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 590px;
+  }
+}
+
+.image {
+  height: 168px;
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1280px) {
+    height: 296px;
+  }
+
+  & img {
+    min-width: 100%;
+  }
+}
+
+.paragraph {
+  padding: 24px 12px 12px 12px;
+  min-height: 100%;
+
+  @media (min-width: 1280px) {
+    padding: 36px 48px;
+  }
+}
+
+.paragraph__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 90px;
+
+  & h3 {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+    max-width: 175px;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+      max-width: 220px;
+    }
+
+    @media (min-width: 1280px) {
+      font-size: 24px;
+      height: 296px;
+      letter-spacing: -0.96px;
+      max-width: 357px;
+    }
+  }
+
+  & .button__card {
+    border-radius: 100px;
+    background: #97d28b;
+    padding: 16px;
+    display: inline-flex;
+    align-self: center;
+    margin-left: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+
+    &:hover,
+    &:focus {
+      background: #173D33;
+    }
+
+    & svg {
+      transition: all 0.3s ease;
+      stroke: #173D33;
+    }
+
+    &:hover svg,
+    &:focus svg {
+      stroke: #97d28b;
+    }
+
+    @media (min-width: 768px) {
+      margin-left: 28px;
+    }
+  }
+}
+
+.paragraph__local {
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: flex-end;
+  margin-top: 12px;
+  width: 100%;
+
+  padding-top: 12px;
+  border-top: 1px solid #97d28b;
+
+  @media (min-width: 1280px) {
+    margin-top: 24px;
+  }
+
+  & p {
+    font-size: 12px;
+
+    @media (min-width: 768px) {
+      font-size: 14px;
+    }
+
+    @media (min-width: 1280px) {
+      font-size: 16px;
+      letter-spacing: -0.64px;
+    }
+  }
+}

@@ -1,0 +1,139 @@
+.container__cases {
+    max-width: 440px;
+    overflow: hidden;
+    @media (min-width: 768px) {
+    max-width: 708px;
+
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 1220px;
+  }
+}
+
+.container__info {
+  display: block;
+  max-width: 100%;
+
+
+  @media (min-width: 768px) {
+    // max-width: 708px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  @media (min-width: 1280px) {
+    // max-width: 1220px;
+  }
+}
+
+.container__card {
+  display: flex;
+  margin-top: 26px;
+
+  @media (min-width: 768px) {
+    margin-top: 38px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 120px;
+  }
+}
+
+.container__title {
+  margin-bottom: 24px;
+
+  @media (min-width: 768px) {
+    flex: 1 1 50%;
+    margin-bottom: 0px;
+  }
+
+  @media (min-width: 1280px) {
+    // max-width: 390px;
+  }
+}
+
+.text__size {
+  max-width: 264px;
+
+  @media (min-width: 768px) {
+    max-width: 260px;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 390px;
+  }
+}
+
+.container__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @media (min-width: 768px) {
+    flex: 1 1 50%;
+
+    padding-left: 11px;
+    border-left: 1px solid #97d28b;
+  }
+
+  @media (min-width: 1280px) {
+    padding-left: 160px;
+  }
+}
+
+.numbers {
+  display: flex;
+
+  & p {
+    color: rgba(23, 61, 51, 0.25);
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: -1.12px;
+  }
+
+  & .number__first {
+    color: #173d33;
+    text-align: justify;
+  }
+}
+
+
+.row {
+
+  display: inline-flex;
+  padding: 15px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 100px;
+  border: 1px solid #173d33;
+
+  background-color:  transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 12px;
+
+    
+  @media (min-width: 1280px) {
+    margin-right: 24px; 
+  }
+  }
+
+  &:hover {
+  border: 1px solid #97d28b;
+
+  }
+  & svg {
+    transition: all 0.3s ease;
+    stroke: #173d33;
+  }
+
+  &:hover svg {
+    stroke: #97d28b;
+  }
+
+  
+}
