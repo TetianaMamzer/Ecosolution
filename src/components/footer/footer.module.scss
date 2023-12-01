@@ -1,0 +1,121 @@
+.container {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  padding: 24px 0px;
+  border-top: 1px solid #97d28b;
+
+  @media (min-width: 768px) {
+   padding: 40px 0px;
+  }
+
+}
+
+.logo__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+    margin-bottom: 16px;    
+  }
+
+  @media (min-width: 1280px) {
+    justify-content: space-between;
+  }
+}
+
+.button {
+  padding: 8px;
+  border-radius: 100px;
+  display: inline-flex;
+  background: #97d28b;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  & svg {
+    stroke: #173d33;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    background: #173d33;
+
+    & svg {
+      stroke: #97d28b;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0px;
+    margin-left: 100px;
+    margin-right: 255px;
+  }
+}
+
+.social__link {
+  stroke: #173d33;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &:hover {
+    stroke: #97d28b;
+  }
+}
+.adress {
+  @media (min-width: 768px) {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+  }
+
+  @media (min-width: 1280px) {
+    justify-content: space-between;
+  }
+
+  & a {
+    transition: all 0.3s ease;
+  }
+  & a:hover {
+    color: #97d28b;
+  }
+}
+
+.adress_text {
+  margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    margin-right: 70px;
+    margin-bottom: 0px;
+  }
+
+ }
+
+ .maill_text {
+  margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    margin-right: 55px;
+    margin-bottom: 0px;
+  }
+ }

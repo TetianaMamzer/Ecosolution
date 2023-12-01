@@ -24,16 +24,21 @@ const Form = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    // Ваші правила валідації тут
-    if (!formData.fullName.trim()) {
-      newErrors.fullName = 'Full name is required';
+    const nameRegex = /^[A-Za-z]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const ukrainianPhoneNumberRegex = /^\+38\s?\(0[1-9][0-9]\)\s?[0-9]{3}-[0-9]{2}-[0-9]{2}$/;
+
+    if (!formData.fullName.trim() || !nameRegex.test(formData.fullName)) {
+      newErrors.fullName = 'Wrong Fullname';
     }
 
-    if (!formData.email.trim()) {
-      newErrors.email = 'E-mail is required';
+    if (!formData.email.trim() || !emailRegex.test(formData.email)) {
+      newErrors.email = 'Wrong Email';
     }
 
-    // Додайте інші правила валідації за необхідності
+    if (!formData.phone.trim() || !ukrainianPhoneNumberRegex.test(formData.phone) || (formData.phone.length >= 10 && formData.phone.length <= 13 )) {
+      newErrors.phone = 'Wrong Phone';
+    }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -42,56 +47,76 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    console.log(formData.phone.length)
     if (validateForm()) {
-      // Відправте дані або виконайте інші дії за необхідності
       console.log('Form is valid:', formData);
+      e.target.reset();
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        message: '',
+      });
+      setErrors({});
     } else {
       console.log('Form has errors:', errors);
     }
   };
 
+  const style = errors.phone ? `${css.error} ${css.active}` : `${css.error}`;
+  const row = errors.phone ? `${css.form__row} ${css.active}` : `${css.form__row}`;
+
+
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="fullName">Full name:</label>
+    <form onSubmit={handleSubmit} className={css.form}>
+      <div className={row}>
+        <label htmlFor="fullName" className={css.form__label}>* Full name:</label>
         <input
           type="text"
           id="fullName"
           name="fullName"
           value={formData.fullName}
           onChange={handleChange}
+          className={css.form__input}
+          placeholder='John Rosie'
         />
-        {errors.fullName && <span className="error">{errors.fullName}</span>}
       </div>
-      <div>
-        <label htmlFor="email">E-mail:</label>
+       <span className={style}>{errors.fullName}</span>
+      <div className={row}>
+        <label htmlFor="email" className={css.form__label}>* E-mail:</label>
         <input
           type="email"
           id="email"
           name="email"
           value={formData.email}
           onChange={handleChange}
+          className={css.form__input}
+          placeholder="johnrosie@gmail.com"
         />
-        {errors.email && <span className="error">{errors.email}</span>}
       </div>
-      <div>
-        <label htmlFor="phone">Phone:</label>
+      <span className={style}>{errors.email}</span>
+      <div className={row}>
+        <label htmlFor="phone" className={css.form__label}>* Phone:</label>
         <input
           type="tel"
           id="phone"
           name="phone"
           value={formData.phone}
           onChange={handleChange}
+          className={css.form__input}
+          placeholder="380961234567"
         />
-        {/* Додайте валідацію для телефону за необхідності */}
       </div>
-      <div>
-        <label htmlFor="message">Message:</label>
+      <span className={style}>{errors.phone}</span>
+      <div className={css.textarea}>
+        <label htmlFor="message" className={css.form__label}>Message:</label>
         <textarea
           id="message"
           name="message"
           value={formData.message}
           onChange={handleChange}
+          className={css.form__input}
+          placeholder="Your message"
         />
       </div>
       <div className={css.button}>

@@ -5,6 +5,7 @@ import Electro from "./components/elektri/Electro";
 import Cases from "./components/cases/Cases";
 import Faq from "components/faq/Faq";
 import Contacts from "components/contacts/Contacts";
+import Footer from "components/footer/Footer";
 
 import css from './app.module.scss';
 
@@ -17,7 +18,8 @@ function App() {
       <Electro />
       <Cases />
       <Faq />
-      <Contacts/>
+      <Contacts  />
+      <Footer />
     </div>
   );
 }

@@ -1,10 +1,9 @@
 import css from "./container.module.scss";
 
 
-const Container = ({ children }) => {
-
+const Container = ({ children,  id='home' }) => {
   return (
-    <div className={css.container}>{children}</div>
+    <div className={css.container} id={id}>{children}</div>
   )
 }
 

@@ -20,11 +20,18 @@ const Header = () => {
 
     window.addEventListener('scroll', handleScroll);
 
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
+  const handleClick = () => {
+    const contactSection = document.getElementById('contacts');
+    console.log(contactSection)
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  };
+  
   return (
     <div className={isScrolled ? `${css.container} ${css.fixed}` : css.container}>
       <div className={css.header}>
@@ -33,8 +40,8 @@ const Header = () => {
           <div className={css.burger}>
             <Burger />
           </div>
-          <div className={css.button}>
-          <Button text='Get in touch'/>
+          <div className={css.button} onClick={handleClick}>
+          <Button text='Get in touch' />
           </div>
         </div>
       </div>

@@ -1,0 +1,72 @@
+.form__row {
+  border-bottom: 1px solid #97d28b;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &.active {
+    border-bottom: 1px solid #d28b8b;
+  }
+
+  @media (min-width: 1280px) {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  color: #173d33;
+  margin: 8px 0px;
+
+  font-family: Fira Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.72px;
+
+  @media (min-width: 1280px) {
+    font-size: 20px;
+    letter-spacing: -0.8px;
+    margin: 12px 0px 8px;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.error {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: flex-end;
+  color: transparent;
+  font-size: 12px;
+  letter-spacing: -0.48px;
+  height: 14px;
+
+  &.active {
+    color: #d28b8b;
+  }
+}
+
+.textarea {
+  border-bottom: 1px solid #97d28b;
+  margin-bottom: 16px;
+
+  & textarea {
+    max-height: 150px;
+    resize: none;
+    overflow: auto;
+  }
+  @media (min-width: 1280px) {
+    margin-bottom: 32px;
+    
+  }
+}

@@ -35,7 +35,7 @@ const Cases = () => {
 
 
   return (
-    <Container>
+    <Container id="cases">
       <div className={css.container__cases}>
         <div className={css.container__info}>
           <div className={css.container__title}>

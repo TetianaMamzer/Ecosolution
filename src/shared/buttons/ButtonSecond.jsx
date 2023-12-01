@@ -1,8 +1,10 @@
+import React from "react";
 import css from "./button.module.scss";
 
 const ButtonSecond = ({ text }) => {
+
   return (
-    <button className={css.button__second}>
+    <button className={css.button__second} >
       <p className={css.paragraph}>{text}</p>
       <div className={css.button__container}>
       <svg

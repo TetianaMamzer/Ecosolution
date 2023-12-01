@@ -104,7 +104,12 @@
     display: flex;
   }
 
-
+  & a {
+    transition: all 0.3s ease;
+  }
+  & a:hover {
+    color: #97d28b;
+  }
 }
 
 .adress {

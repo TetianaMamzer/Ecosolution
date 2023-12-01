@@ -19,6 +19,12 @@ const Faq = () => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
+  const handleClick = () => {
+    const contactSection = document.getElementById('contacts');
+    console.log(contactSection)
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <Container>
       {isSmallScreen ? <>
@@ -122,7 +128,7 @@ const Faq = () => {
             <p className={css.text}>
               Didn't find the answer to your question?{' '}
             </p>
-                <div className={css.button__faq}>
+                <div className={css.button__faq} onClick={handleClick}>
                 <Button text="Contact Us" />
             </div>
           </div>

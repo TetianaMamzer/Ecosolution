@@ -1,0 +1,158 @@
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 36px;
+
+  @media (min-width: 768px) {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+}
+
+.title {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 120px;
+  }
+}
+
+.contacts__container {
+  display: block;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
+
+.contacts {
+  margin-bottom: 24px;
+
+  & div:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 12px;
+    flex: 1 1 50%;
+  }
+
+  @media (min-width: 1280px) {
+    margin-right: 24px;
+    & div:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.contacts__title {
+  font-size: 16px;
+  letter-spacing: -0.64px;
+  margin-bottom: 8px;
+
+  @media (min-width: 1280px) {
+    margin-bottom: 16px;
+  }
+}
+
+.phone__number,
+.mail__link,
+.adress__link {
+  font-size: 20px;
+  letter-spacing: -0.8px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 32px;
+  transition: all 0.3s ease;
+
+  @media (min-width: 1280px) {
+    font-size: 24px;
+    letter-spacing: -0.96px;
+  }
+
+  &:hover {
+    color: #97d28b;
+  }
+}
+
+.phone__number {
+  display: block;
+  background-image: url('../../img/contacts/call.svg');
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+ 
+}
+
+.mail__link {
+  background-image: url('../../img/contacts/sms.svg');
+}
+
+.adress {
+  max-width: 260px;
+
+  @media (min-width: 1280px) {
+    max-width: 100%;
+  }
+
+}
+.adress__link {
+  background-image: url('../../img/contacts/map.svg');
+}
+
+.social__link {
+  padding: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+    stroke: #173d33;
+    transition: all 0.3s ease;
+
+  
+    
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  
+    &:hover {
+      stroke: #97d28b;
+    }
+  
+
+  @media (min-width: 1280px) {
+    padding: 0;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
+
+.form {
+  width: 100%;
+  padding: 36px 12px;
+  background: #eaedf1;
+
+  @media (min-width: 768px) {
+    flex: 1 1 50%;
+    padding: 36px 24px;
+    margin-left: 12px;
+  }
+  @media (min-width: 1280px) {
+    padding: 48px;
+    margin-left: 24px;
+  }
+}
