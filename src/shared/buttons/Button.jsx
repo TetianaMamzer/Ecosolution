@@ -1,8 +1,10 @@
 import css from "./button.module.scss";
 
-const Button = ({ text }) => {
+const Button = ({ text, active=false }) => {
+
+  const style = active ? `${css.button} ${css.active}` : `${ css.button }`;
   return (
-    <button className={css.button}>
+    <button className={style}>
       <h3>{text}</h3>
         <svg
         width="14"

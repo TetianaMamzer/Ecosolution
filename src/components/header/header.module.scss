@@ -3,6 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 100;
     background-color: transparent;
     transition: background-color 0.3s ease;
     height: 112px;
@@ -67,4 +68,10 @@
   &:focus {
     background: #97d28b;
   }
+}
+
+.button {
+  margin-left: 12px;
+  justify-content: center;
+  align-items: center;
 }

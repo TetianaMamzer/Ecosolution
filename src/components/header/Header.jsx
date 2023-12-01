@@ -33,7 +33,9 @@ const Header = () => {
           <div className={css.burger}>
             <Burger />
           </div>
+          <div className={css.button}>
           <Button text='Get in touch'/>
+          </div>
         </div>
       </div>
       </div>

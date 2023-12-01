@@ -1,10 +1,8 @@
 .button {
   display: none;
 
-  @media (min-width: 768px) {
-    display: flex;
-    align-items: center;
-    margin-left: 12px;
+  &.active {
+    display:flex;
     padding: 10px 16px;
     justify-content: center;
     align-items: center;
@@ -12,8 +10,22 @@
     background: #97d28b;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    margin: 0 auto;
+  
   }
-  & h3 {
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;   
+    padding: 10px 16px;
+    border-radius: 500px;
+    background: #97d28b;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+  }
+
+  & h3,
+  &.active h3 {
     margin-right: 12px;
     color: #173d33;
     font-family: Fira Sans;
@@ -26,17 +38,23 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &.active:hover{
     background-color: #173d33;
   }
 
   &:hover h3,
-  &:focus h3 {
+  &:focus h3,
+  &.active:hover h3,
+  &.active:focus h3
+   {
     color: #97d28b;
   }
 
   &:hover .ellips circle,
-  &:focus .ellips circle {
+  &:focus .ellips circle,
+  &.active:hover .ellips circle,
+  &.active:focus .ellips circle {
     fill: #97d28b;
   }
 }
@@ -82,3 +100,4 @@
 .paragraph {
   transition: all 0.3s ease 0s;
 }
+
