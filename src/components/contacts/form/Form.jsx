@@ -24,9 +24,9 @@ const Form = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    const nameRegex = /^[A-Za-z]+$/;
+    const nameRegex = /^[A-Za-zА-Яа-я \s]+$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const ukrainianPhoneNumberRegex = /^\+38\s?\(0[1-9][0-9]\)\s?[0-9]{3}-[0-9]{2}-[0-9]{2}$/;
+    const ukrainianPhoneNumberRegex = /^[0-9\s-]*$/;
 
     if (!formData.fullName.trim() || !nameRegex.test(formData.fullName)) {
       newErrors.fullName = 'Wrong Fullname';
@@ -36,7 +36,7 @@ const Form = () => {
       newErrors.email = 'Wrong Email';
     }
 
-    if (!formData.phone.trim() || !ukrainianPhoneNumberRegex.test(formData.phone) || (formData.phone.length >= 10 && formData.phone.length <= 13 )) {
+    if (!formData.phone.trim() || !ukrainianPhoneNumberRegex.test(formData.phone)) {
       newErrors.phone = 'Wrong Phone';
     }
 
