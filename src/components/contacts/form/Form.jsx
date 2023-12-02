@@ -47,7 +47,6 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(formData.phone.length)
     if (validateForm()) {
       console.log('Form is valid:', formData);
       e.target.reset();

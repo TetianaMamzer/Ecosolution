@@ -6,7 +6,6 @@ const Hero = () => {
 
   const handleClick = () => {
     const contactSection = document.getElementById('cases');
-    console.log(contactSection)
     contactSection.scrollIntoView({ behavior: 'smooth' });
   };
 

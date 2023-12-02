@@ -11,7 +11,6 @@ import { useMediaQuery } from 'react-responsive';
 const Footer = ({ text }) => {
   const handleClick = () => {
     const contactSection = document.getElementById('hero');
-    console.log(contactSection)
     contactSection.scrollIntoView({ behavior: 'smooth' });
   }
   const isSmallScreen = useMediaQuery({ maxWidth: 768 });

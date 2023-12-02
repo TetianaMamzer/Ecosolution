@@ -7,9 +7,9 @@ import { ReactComponent as Icons2 } from "../../img/about/icon2.svg";
 import { ReactComponent as Icons3 } from "../../img/about/icon3.svg";
 import { ReactComponent as Icons4 } from "../../img/about/icon4.svg";
 
-const Values = ({ text }) => {
+const Values = () => {
   return (
-    <Container>
+    <Container id="about">
       <div className="">
         <div className={css.container__value}>
           <div className={css.title__container}>
